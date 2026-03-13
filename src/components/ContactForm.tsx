@@ -4,10 +4,34 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(false);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("https://formspree.io/f/xlgplgpn", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -93,8 +117,14 @@ export default function ContactForm() {
         />
       </div>
 
-      <button type="submit" className="btn-primary">
-        Send Message
+      {error && (
+        <p className="text-red-500 text-sm">
+          Something went wrong. Please try again or email us directly.
+        </p>
+      )}
+
+      <button type="submit" disabled={submitting} className="btn-primary disabled:opacity-50">
+        {submitting ? "Sending..." : "Send Message"}
       </button>
     </form>
   );

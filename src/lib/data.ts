@@ -299,6 +299,6 @@ export const navLinks = [
 export const companyInfo = {
   name: "McCaulley Deck Co",
   phone: "(224) 655-9041",
-  email: "max@mccaulleydeck.co",
+  email: "max@mccaulleyexteriors.com",
   address: "Serving the Greater Chicagoland Area",
 };

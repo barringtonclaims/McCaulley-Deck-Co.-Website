@@ -8,20 +8,26 @@ type HeroMap = Record<
   { renderingIndex: number; photoIndex: number }
 >;
 
+const ADMIN_PW = "Bridget1208!";
+
 export default function AdminPage() {
   const [heroes, setHeroes] = useState<HeroMap>({});
   const [saving, setSaving] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [authed, setAuthed] = useState(false);
+  const [pw, setPw] = useState("");
+  const [pwError, setPwError] = useState(false);
 
   // Load current selections
   useEffect(() => {
+    if (!authed) return;
     fetch("/api/heroes")
       .then((r) => r.json())
       .then((data) => {
         setHeroes(data);
         setLoaded(true);
       });
-  }, []);
+  }, [authed]);
 
   const selectHero = async (
     projectId: string,
@@ -47,6 +53,46 @@ export default function AdminPage() {
 
     setSaving(null);
   };
+
+  if (!authed) {
+    return (
+      <div className="min-h-screen bg-cream flex items-center justify-center">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (pw === ADMIN_PW) {
+              setAuthed(true);
+              setPwError(false);
+            } else {
+              setPwError(true);
+            }
+          }}
+          className="text-center space-y-4"
+        >
+          <p className="text-navy/30 text-xs tracking-widest uppercase">
+            Admin
+          </p>
+          <input
+            type="password"
+            value={pw}
+            onChange={(e) => { setPw(e.target.value); setPwError(false); }}
+            placeholder="Password"
+            className="block mx-auto w-64 px-4 py-2.5 border border-cream-dark rounded bg-white text-navy text-sm focus:outline-none focus:ring-2 focus:ring-navy/20"
+            autoFocus
+          />
+          {pwError && (
+            <p className="text-red-500 text-xs">Incorrect password</p>
+          )}
+          <button
+            type="submit"
+            className="text-xs tracking-widest uppercase text-navy/50 hover:text-navy transition-colors"
+          >
+            Enter
+          </button>
+        </form>
+      </div>
+    );
+  }
 
   if (!loaded) {
     return (
