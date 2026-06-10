@@ -299,7 +299,7 @@ export const navLinks = [
 export const companyInfo = {
   name: "McCaulley Deck Co.",
   phone: "(224) 655-9041",
-  email: "max@mccaulleydeck.co",
+  email: "max@mccaulleyexteriors.com",
   website: "mccaulleydeck.co",
   address: "Serving the Greater Chicagoland Area",
   tagline: "Designed & built by hand",

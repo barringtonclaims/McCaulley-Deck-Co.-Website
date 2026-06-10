@@ -53,7 +53,7 @@ Rule of thumb: Timber for amber on dark, Bronze for amber on light.
 
 - McCaulley Deck Co.
 - (224) 655-9041
-- max@mccaulleydeck.co
+- max@mccaulleydeck.co (mailbox not set up yet - site uses max@mccaulleyexteriors.com until it is)
 - mccaulleydeck.co
 - Serving the Greater Chicagoland Area
 
