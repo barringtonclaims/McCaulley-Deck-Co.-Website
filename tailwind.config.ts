@@ -9,13 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: "#1c2e4a",
-        "navy-light": "#2a4168",
-        cream: "#f4f0ea",
-        "cream-dark": "#e8e2d8",
+        // McCaulley Deck Co. brand palette (see BRAND.md)
+        charcoal: "#20211F",
+        "charcoal-light": "#33342F",
+        paper: "#F3F1EA",
+        "paper-dark": "#E5E1D6",
+        timber: "#D29A55",
+        "timber-light": "#DDAF74",
+        bronze: "#B0763B",
       },
       fontFamily: {
-        serif: ['"Playfair Display"', "Georgia", "serif"],
         sans: ["Inter", "system-ui", "sans-serif"],
       },
       keyframes: {

@@ -79,21 +79,21 @@ export default function ProjectLightbox({
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-navy/95 backdrop-blur-sm"
+        className="absolute inset-0 bg-charcoal/95 backdrop-blur-sm"
         onClick={handleClose}
       />
 
       {/* Top bar */}
       <div className="relative z-10 flex items-center justify-between px-5 sm:px-8 py-4">
         <div className="flex items-center gap-4">
-          <h3 className="text-cream/90 font-serif text-lg sm:text-xl">
+          <h3 className="text-paper/90 font-bold tracking-tight text-lg sm:text-xl">
             {project.title}
           </h3>
           <span
             className={`text-[10px] tracking-[0.2em] uppercase px-2.5 py-1 ${
               isPhotoPhase
-                ? "bg-cream/15 text-cream/70"
-                : "bg-cream/15 text-cream/70"
+                ? "bg-paper/15 text-paper/70"
+                : "bg-paper/15 text-paper/70"
             }`}
           >
             {isPhotoPhase ? "The Build" : "The Vision"}
@@ -101,7 +101,7 @@ export default function ProjectLightbox({
         </div>
         <button
           onClick={handleClose}
-          className="text-cream/50 hover:text-cream transition-colors p-1"
+          className="text-paper/50 hover:text-paper transition-colors p-1"
           aria-label="Close"
         >
           <svg
@@ -128,7 +128,7 @@ export default function ProjectLightbox({
           className={`absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-2 rounded-full transition-all duration-200 ${
             currentIndex === 0
               ? "opacity-0 pointer-events-none"
-              : "text-cream/50 hover:text-cream hover:bg-cream/10"
+              : "text-paper/50 hover:text-paper hover:bg-paper/10"
           }`}
           aria-label="Previous image"
         >
@@ -151,7 +151,7 @@ export default function ProjectLightbox({
           <img
             key={current.src}
             src={current.src}
-            alt={`${project.title} — ${current.type === "rendering" ? "design" : "photo"} ${phaseIndex}`}
+            alt={`${project.title} - ${current.type === "rendering" ? "design" : "photo"} ${phaseIndex}`}
             className="max-w-full max-h-full object-contain rounded-sm animate-fadeIn"
           />
         </div>
@@ -163,7 +163,7 @@ export default function ProjectLightbox({
           className={`absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-2 rounded-full transition-all duration-200 ${
             currentIndex === totalImages - 1
               ? "opacity-0 pointer-events-none"
-              : "text-cream/50 hover:text-cream hover:bg-cream/10"
+              : "text-paper/50 hover:text-paper hover:bg-paper/10"
           }`}
           aria-label="Next image"
         >
@@ -186,10 +186,10 @@ export default function ProjectLightbox({
       <div className="relative z-10 px-5 sm:px-8 pb-5">
         {/* Counter */}
         <div className="flex items-center justify-between mb-3">
-          <span className="text-cream/40 text-xs tracking-wide">
+          <span className="text-paper/40 text-xs tracking-wide">
             {isPhotoPhase ? "The Build" : "The Vision"} &middot; {phaseIndex} / {phaseTotal}
           </span>
-          <span className="text-cream/30 text-xs tracking-wide">
+          <span className="text-paper/30 text-xs tracking-wide">
             {currentIndex + 1} / {totalImages}
           </span>
         </div>
@@ -204,13 +204,13 @@ export default function ProjectLightbox({
               <div key={i} className="flex items-center gap-1.5">
                 {/* Divider between renderings and photos */}
                 {isBoundary && (
-                  <div className="w-px h-8 bg-cream/20 mx-1 shrink-0" />
+                  <div className="w-px h-8 bg-paper/20 mx-1 shrink-0" />
                 )}
                 <button
                   onClick={() => setCurrentIndex(i)}
                   className={`shrink-0 w-12 h-9 sm:w-14 sm:h-10 rounded-[2px] overflow-hidden transition-all duration-200 ${
                     isActive
-                      ? "ring-1 ring-cream/80 opacity-100"
+                      ? "ring-1 ring-paper/80 opacity-100"
                       : "opacity-40 hover:opacity-70"
                   }`}
                 >

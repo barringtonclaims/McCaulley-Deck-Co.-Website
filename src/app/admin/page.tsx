@@ -56,7 +56,7 @@ export default function AdminPage() {
 
   if (!authed) {
     return (
-      <div className="min-h-screen bg-cream flex items-center justify-center">
+      <div className="min-h-screen bg-paper flex items-center justify-center">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -69,7 +69,7 @@ export default function AdminPage() {
           }}
           className="text-center space-y-4"
         >
-          <p className="text-navy/30 text-xs tracking-widest uppercase">
+          <p className="text-charcoal/30 text-xs tracking-widest uppercase">
             Admin
           </p>
           <input
@@ -77,7 +77,7 @@ export default function AdminPage() {
             value={pw}
             onChange={(e) => { setPw(e.target.value); setPwError(false); }}
             placeholder="Password"
-            className="block mx-auto w-64 px-4 py-2.5 border border-cream-dark rounded bg-white text-navy text-sm focus:outline-none focus:ring-2 focus:ring-navy/20"
+            className="block mx-auto w-64 px-4 py-2.5 border border-paper-dark rounded bg-white text-charcoal text-sm focus:outline-none focus:ring-2 focus:ring-charcoal/20"
             autoFocus
           />
           {pwError && (
@@ -85,7 +85,7 @@ export default function AdminPage() {
           )}
           <button
             type="submit"
-            className="text-xs tracking-widest uppercase text-navy/50 hover:text-navy transition-colors"
+            className="text-xs tracking-widest uppercase text-charcoal/50 hover:text-charcoal transition-colors"
           >
             Enter
           </button>
@@ -96,24 +96,24 @@ export default function AdminPage() {
 
   if (!loaded) {
     return (
-      <div className="min-h-screen bg-cream flex items-center justify-center">
-        <p className="text-navy/40 text-sm tracking-wide">Loading...</p>
+      <div className="min-h-screen bg-paper flex items-center justify-center">
+        <p className="text-charcoal/40 text-sm tracking-wide">Loading...</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-paper">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
-          <p className="text-navy/30 text-xs tracking-widest uppercase mb-2">
+          <p className="text-charcoal/30 text-xs tracking-widest uppercase mb-2">
             Admin
           </p>
-          <h1 className="font-serif text-3xl sm:text-4xl text-navy">
+          <h1 className="font-bold tracking-tight text-3xl sm:text-4xl text-charcoal">
             Hero Image Picker
           </h1>
-          <p className="text-navy/50 mt-3 max-w-lg text-sm leading-relaxed">
+          <p className="text-charcoal/50 mt-3 max-w-lg text-sm leading-relaxed">
             Click a design and a photo for each project to set the thumbnail
             that appears on the Projects page. Your selection saves
             automatically.
@@ -132,14 +132,14 @@ export default function AdminPage() {
             return (
               <div
                 key={project.id}
-                className="border-t border-cream-dark pt-8"
+                className="border-t border-paper-dark pt-8"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <h2 className="font-serif text-xl text-navy">
+                  <h2 className="font-bold tracking-tight text-xl text-charcoal">
                     {project.title}
                   </h2>
                   {isSaving && (
-                    <span className="text-[10px] tracking-widest uppercase text-navy/30">
+                    <span className="text-[10px] tracking-widest uppercase text-charcoal/30">
                       Saving...
                     </span>
                   )}
@@ -147,7 +147,7 @@ export default function AdminPage() {
 
                 {/* Renderings */}
                 <div className="mb-6">
-                  <p className="text-navy/40 text-xs tracking-widest uppercase mb-3">
+                  <p className="text-charcoal/40 text-xs tracking-widest uppercase mb-3">
                     Pick hero design
                   </p>
                   <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
@@ -161,7 +161,7 @@ export default function AdminPage() {
                           }
                           className={`shrink-0 w-36 h-28 sm:w-44 sm:h-32 rounded overflow-hidden transition-all duration-200 ${
                             isSelected
-                              ? "ring-2 ring-navy opacity-100 scale-[1.02]"
+                              ? "ring-2 ring-charcoal opacity-100 scale-[1.02]"
                               : "opacity-50 hover:opacity-80"
                           }`}
                         >
@@ -178,7 +178,7 @@ export default function AdminPage() {
 
                 {/* Photos */}
                 <div>
-                  <p className="text-navy/40 text-xs tracking-widest uppercase mb-3">
+                  <p className="text-charcoal/40 text-xs tracking-widest uppercase mb-3">
                     Pick hero photo
                   </p>
                   <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
@@ -192,7 +192,7 @@ export default function AdminPage() {
                           }
                           className={`shrink-0 w-36 h-28 sm:w-44 sm:h-32 rounded overflow-hidden transition-all duration-200 ${
                             isSelected
-                              ? "ring-2 ring-navy opacity-100 scale-[1.02]"
+                              ? "ring-2 ring-charcoal opacity-100 scale-[1.02]"
                               : "opacity-50 hover:opacity-80"
                           }`}
                         >

@@ -12,10 +12,10 @@ export default function ProgressMarquee() {
   const tripled = [...progressPhotos, ...progressPhotos, ...progressPhotos];
 
   return (
-    <section className="relative py-6 overflow-hidden border-t border-cream-dark">
+    <section className="relative py-6 overflow-hidden border-t border-paper-dark">
       {/* Gradient masks */}
-      <div className="absolute inset-y-0 left-0 w-32 sm:w-48 z-10 bg-gradient-to-r from-cream to-transparent pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-32 sm:w-48 z-10 bg-gradient-to-l from-cream to-transparent pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-32 sm:w-48 z-10 bg-gradient-to-r from-paper to-transparent pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-32 sm:w-48 z-10 bg-gradient-to-l from-paper to-transparent pointer-events-none" />
 
       <div
         className="flex gap-2.5 animate-marquee-right opacity-60"

@@ -28,7 +28,7 @@ projects.forEach((p, i) => {
   // Add the project's admin-selected build photo
   images.push({
     src: p.photos[h.photoIndex] || p.photos[0],
-    alt: `${p.title} — build`,
+    alt: `${p.title} - build`,
   });
 
   // Interleave a curated hero photo after every project photo
@@ -49,10 +49,10 @@ export default function ImageMarquee() {
   const doubled = [...images, ...images];
 
   return (
-    <section className="relative py-6 overflow-hidden border-t border-cream-dark">
-      {/* Gradient masks — fade into cream at both edges */}
-      <div className="absolute inset-y-0 left-0 w-32 sm:w-48 z-10 bg-gradient-to-r from-cream to-transparent pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-32 sm:w-48 z-10 bg-gradient-to-l from-cream to-transparent pointer-events-none" />
+    <section className="relative py-6 overflow-hidden border-t border-paper-dark">
+      {/* Gradient masks - fade into paper at both edges */}
+      <div className="absolute inset-y-0 left-0 w-32 sm:w-48 z-10 bg-gradient-to-r from-paper to-transparent pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-32 sm:w-48 z-10 bg-gradient-to-l from-paper to-transparent pointer-events-none" />
 
       <div
         className="flex gap-2.5 animate-marquee-left opacity-70"

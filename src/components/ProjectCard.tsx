@@ -25,13 +25,13 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       <article className="group">
         {/* Project header */}
         <div className="mb-6">
-          <p className="text-navy/30 text-xs tracking-widest uppercase mb-2">
+          <p className="eyebrow mb-2">
             Project {String(index + 1).padStart(2, "0")}
           </p>
-          <h2 className="font-serif text-2xl sm:text-3xl text-navy">
+          <h2 className="font-bold tracking-tight text-2xl sm:text-3xl text-charcoal">
             {project.title}
           </h2>
-          <p className="text-navy/50 mt-3 leading-relaxed max-w-xl text-sm sm:text-base">
+          <p className="text-charcoal/65 mt-3 leading-relaxed max-w-xl text-sm sm:text-base">
             {project.description}
           </p>
         </div>
@@ -46,11 +46,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <div className="relative overflow-hidden rounded-sm aspect-[4/3]">
               <img
                 src={heroRendering}
-                alt={`${project.title} — design`}
+                alt={`${project.title} - design`}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               />
               <div className="absolute top-3 left-3">
-                <span className="text-[10px] tracking-[0.2em] uppercase bg-cream/85 text-navy/70 px-2.5 py-1 backdrop-blur-sm">
+                <span className="text-[10px] tracking-[0.2em] uppercase bg-paper/85 text-charcoal/70 px-2.5 py-1 backdrop-blur-sm">
                   The Vision
                 </span>
               </div>
@@ -60,11 +60,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <div className="relative overflow-hidden rounded-sm aspect-[4/3]">
               <img
                 src={heroPhoto}
-                alt={`${project.title} — completed`}
+                alt={`${project.title} - completed`}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               />
               <div className="absolute top-3 left-3">
-                <span className="text-[10px] tracking-[0.2em] uppercase bg-cream/85 text-navy/70 px-2.5 py-1 backdrop-blur-sm">
+                <span className="text-[10px] tracking-[0.2em] uppercase bg-paper/85 text-charcoal/70 px-2.5 py-1 backdrop-blur-sm">
                   The Build
                 </span>
               </div>
@@ -73,10 +73,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
           {/* Click indicator */}
           <div className="mt-3 flex items-center justify-between">
-            <span className="text-navy/40 text-xs tracking-wide">
+            <span className="text-charcoal/55 text-xs tracking-wide">
               {project.renderings.length} designs &middot; {project.photos.length} photos
             </span>
-            <span className="text-navy/50 text-xs tracking-wide flex items-center gap-1.5 group-hover:text-navy transition-colors duration-200">
+            <span className="text-charcoal/65 text-xs tracking-wide flex items-center gap-1.5 group-hover:text-charcoal transition-colors duration-200">
               View project
               <svg
                 width="14"

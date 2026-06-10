@@ -1,73 +1,92 @@
+/**
+ * McCaulley Deck Co. brand lockup.
+ *
+ * Geometry of the mark is traced from the brand package (Mark Transparent 720.png):
+ * a 320-unit rounded square of five 52-unit boards on a 72-unit pitch, rotated 45°
+ * so the thin clipped board lands on the lower-right corner.
+ *
+ * variant "light" = for paper/light backgrounds (charcoal wordmark, bronze sub-line)
+ * variant "dark"  = for charcoal/photo backgrounds (paper wordmark, timber sub-line)
+ */
+
 interface LogoProps {
-  variant?: "navy" | "white";
-  badge?: boolean;
+  variant?: "light" | "dark";
+  stacked?: boolean;
   className?: string;
 }
 
+export function BrandMark({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 460 460"
+      className={className}
+      aria-hidden="true"
+      focusable="false"
+    >
+      <g transform="translate(230 230) rotate(-45)" fill="#D29A55">
+        {/* top board - rounded outer corners */}
+        <path d="M-144 -160 h288 a16 16 0 0 1 16 16 v36 h-320 v-36 a16 16 0 0 1 16 -16 z" />
+        <rect x="-160" y="-88" width="320" height="52" />
+        <rect x="-160" y="-16" width="320" height="52" />
+        <rect x="-160" y="56" width="320" height="52" />
+        {/* bottom board - clipped thin by the square edge, rounded outer corners */}
+        <path d="M-160 128 h320 v16 a16 16 0 0 1 -16 16 h-288 a16 16 0 0 1 -16 -16 v-16 z" />
+      </g>
+    </svg>
+  );
+}
+
 export default function Logo({
-  variant = "navy",
-  badge = false,
+  variant = "light",
+  stacked = false,
   className = "",
 }: LogoProps) {
-  const color = variant === "navy" ? "#1B2A4A" : "white";
+  const nameColor = variant === "light" ? "text-charcoal" : "text-paper";
+  const subColor = variant === "light" ? "text-bronze" : "text-timber";
 
-  // Badge version: full border + text (for hero, footer)
-  if (badge) {
+  // Stacked: mark above centered wordmark (hero / yard-sign style)
+  if (stacked) {
     return (
-      <svg
-        viewBox="0 0 800 400"
-        className={className}
+      <span
+        className={`inline-flex flex-col items-center ${className}`}
         role="img"
         aria-label="McCaulley Deck Co."
       >
-        <rect
-          x="80" y="40" width="640" height="320" rx="20" ry="20"
-          fill="none" stroke={color} strokeWidth="6"
-        />
-        <rect
-          x="92" y="52" width="616" height="296" rx="14" ry="14"
-          fill="none" stroke={color} strokeWidth="2"
-        />
-        <text
-          x="400" y="195" textAnchor="middle"
-          fontFamily="'Playfair Display', Georgia, 'Times New Roman', serif"
-          fontWeight="600" fontSize="98" fill={color} letterSpacing="1"
+        <BrandMark className="w-[4.5em] h-[4.5em]" />
+        <span
+          className={`font-bold tracking-tight leading-none text-[2.6em] mt-[0.3em] ${nameColor}`}
         >
           McCaulley
-        </text>
-        <text
-          x="400" y="275" textAnchor="middle"
-          fontFamily="'Playfair Display', Georgia, 'Times New Roman', serif"
-          fontWeight="500" fontSize="72" fill={color} letterSpacing="12"
+        </span>
+        <span
+          className={`font-semibold uppercase tracking-[0.42em] text-[1em] mt-[0.9em] ml-[0.42em] ${subColor}`}
         >
-          DECK CO.
-        </text>
-      </svg>
+          Deck Co.
+        </span>
+      </span>
     );
   }
 
-  // Text-only version: just the wordmark (for header, compact uses)
+  // Horizontal lockup: mark left, wordmark right (header / footer)
   return (
-    <svg
-      viewBox="100 100 600 220"
-      className={className}
+    <span
+      className={`inline-flex items-center gap-[0.55em] ${className}`}
       role="img"
       aria-label="McCaulley Deck Co."
     >
-      <text
-        x="400" y="195" textAnchor="middle"
-        fontFamily="'Playfair Display', Georgia, 'Times New Roman', serif"
-        fontWeight="600" fontSize="98" fill={color} letterSpacing="1"
-      >
-        McCaulley
-      </text>
-      <text
-        x="400" y="275" textAnchor="middle"
-        fontFamily="'Playfair Display', Georgia, 'Times New Roman', serif"
-        fontWeight="500" fontSize="72" fill={color} letterSpacing="12"
-      >
-        DECK CO.
-      </text>
-    </svg>
+      <BrandMark className="w-[2.9em] h-[2.9em] -my-[0.45em] shrink-0" />
+      <span className="flex flex-col items-start">
+        <span
+          className={`font-bold tracking-tight leading-none text-[1.5em] ${nameColor}`}
+        >
+          McCaulley
+        </span>
+        <span
+          className={`font-semibold uppercase tracking-[0.32em] text-[0.6em] mt-[0.45em] ${subColor}`}
+        >
+          Deck Co.
+        </span>
+      </span>
+    </span>
   );
 }

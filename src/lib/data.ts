@@ -51,7 +51,7 @@ export const projects: Project[] = [
     id: "cedar-sanctuary",
     title: "Cedar Backyard Sanctuary",
     description:
-      "An all-cedar backyard sanctuary designed around property line constraints and the specific furniture and features the homeowner wanted to incorporate \u2014 including a pergola over the outdoor dining area and a full barrel-style cedar hot tub integrated into the deck.",
+      "An all-cedar backyard sanctuary designed around property line constraints and the specific furniture and features the homeowner wanted to incorporate - including a pergola over the outdoor dining area and a full barrel-style cedar hot tub integrated into the deck.",
     folder: "08-cedar-sanctuary",
     renderings: [
       "/images/08-cedar-sanctuary/renderings/IMG_0158.PNG",
@@ -105,7 +105,7 @@ export const projects: Project[] = [
     id: "cedar-front-step",
     title: "Cedar Front Step",
     description:
-      "A small but meaningful project. The homeowner wasn\u2019t sure whether to extend the railing in for a narrow staircase or open up the width. They went wide \u2014 a new cedar step with integrated railing that, after one season for the natural oils to evaporate, painted to match the rest of the patio seamlessly.",
+      "A small but meaningful project. The homeowner wasn\u2019t sure whether to extend the railing in for a narrow staircase or open up the width. They went wide - a new cedar step with integrated railing that, after one season for the natural oils to evaporate, painted to match the rest of the patio seamlessly.",
     folder: "01-cedar-front-step",
     renderings: [
       "/images/01-cedar-front-step/renderings/IMG_0396.PNG",
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     id: "stair-rotation-landing",
     title: "Stair Rotation Landing",
     description:
-      "A straightforward composite build where the homeowners wanted to replace an unstable landing and rotate the stairs 90 degrees \u2014 giving them significantly more walkable space on the patio below.",
+      "A straightforward composite build where the homeowners wanted to replace an unstable landing and rotate the stairs 90 degrees - giving them significantly more walkable space on the patio below.",
     folder: "04-stair-rotation-landing",
     renderings: [
       "/images/04-stair-rotation-landing/renderings/IMG_0292.PNG",
@@ -208,7 +208,7 @@ export const projects: Project[] = [
     id: "conversation-pit-patio",
     title: "Conversation Pit Patio",
     description:
-      "This customer started with a simple concrete step in the backyard and imagined something completely different \u2014 a large conversation-pit style patio with black cobblestone inlay, a knee wall with custom low-voltage lighting, and built-in seating for entertaining.",
+      "This customer started with a simple concrete step in the backyard and imagined something completely different - a large conversation-pit style patio with black cobblestone inlay, a knee wall with custom low-voltage lighting, and built-in seating for entertaining.",
     folder: "02-conversation-pit-patio",
     renderings: [
       "/images/02-conversation-pit-patio/renderings/IMG_0255.PNG",
@@ -257,7 +257,7 @@ export const testimonials = [
     project: "Outdoor Living Build",
     stars: 5,
     verified: true,
-    text: "Max converted what was a concept in our minds into a 3D model \u2014 that model must have changed a dozen times till we got to a final version. Max was very patient with us through the process and was always willing to collaborate to get the design that we wanted.",
+    text: "Max converted what was a concept in our minds into a 3D model - that model must have changed a dozen times till we got to a final version. Max was very patient with us through the process and was always willing to collaborate to get the design that we wanted.",
   },
   {
     name: "Tom M.",
@@ -297,8 +297,10 @@ export const navLinks = [
 ];
 
 export const companyInfo = {
-  name: "McCaulley Deck Co",
+  name: "McCaulley Deck Co.",
   phone: "(224) 655-9041",
-  email: "max@mccaulleyexteriors.com",
+  email: "max@mccaulleydeck.co",
+  website: "mccaulleydeck.co",
   address: "Serving the Greater Chicagoland Area",
+  tagline: "Designed & built by hand",
 };

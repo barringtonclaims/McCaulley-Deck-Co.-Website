@@ -8,19 +8,32 @@
   }
 
   body {
-    @apply antialiased text-navy bg-cream;
+    @apply antialiased text-charcoal bg-paper;
+  }
+
+  ::selection {
+    @apply bg-timber/40 text-charcoal;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-3 bg-navy text-cream font-sans text-sm tracking-wide
-      hover:bg-navy-light transition-colors duration-200;
+    @apply inline-flex items-center justify-center px-8 py-3 bg-charcoal text-paper font-sans text-sm tracking-wide
+      hover:bg-charcoal-light transition-colors duration-200;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center px-8 py-3 border border-navy text-navy font-sans text-sm tracking-wide
-      hover:bg-navy hover:text-cream transition-colors duration-200;
+    @apply inline-flex items-center justify-center px-8 py-3 border border-charcoal text-charcoal font-sans text-sm tracking-wide
+      hover:bg-charcoal hover:text-paper transition-colors duration-200;
+  }
+
+  .btn-timber {
+    @apply inline-flex items-center justify-center px-8 py-3 bg-timber text-charcoal font-semibold font-sans text-sm tracking-wide
+      hover:bg-timber-light transition-colors duration-200;
+  }
+
+  .eyebrow {
+    @apply text-bronze text-xs font-semibold tracking-[0.25em] uppercase;
   }
 
   .section-padding {

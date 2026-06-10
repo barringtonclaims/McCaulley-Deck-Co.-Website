@@ -12,11 +12,11 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-cream border-b border-cream-dark px-6 sm:px-8 lg:px-12">
+    <header className="bg-paper border-b border-paper-dark px-6 sm:px-8 lg:px-12">
       <div className="container-max">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="block">
-            <Logo variant="navy" className="h-14 w-auto" />
+            <Logo variant="light" className="text-lg sm:text-xl" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -24,10 +24,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm tracking-wide transition-colors ${
+                className={`text-sm tracking-wide transition-colors pb-1 border-b-2 ${
                   pathname === link.href
-                    ? "text-navy"
-                    : "text-navy/50 hover:text-navy"
+                    ? "text-charcoal font-medium border-timber"
+                    : "text-charcoal/70 hover:text-charcoal border-transparent"
                 }`}
               >
                 {link.label}
@@ -37,7 +37,7 @@ export default function Header() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-navy/60 hover:text-navy"
+            className="md:hidden p-2 text-charcoal/60 hover:text-charcoal"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -46,7 +46,7 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-cream-dark">
+        <div className="md:hidden border-t border-paper-dark">
           <div className="px-6 py-6 space-y-4">
             {navLinks.map((link) => (
               <Link
@@ -54,7 +54,9 @@ export default function Header() {
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={`block text-sm tracking-wide ${
-                  pathname === link.href ? "text-navy" : "text-navy/50"
+                  pathname === link.href
+                    ? "text-charcoal font-medium"
+                    : "text-charcoal/70"
                 }`}
               >
                 {link.label}

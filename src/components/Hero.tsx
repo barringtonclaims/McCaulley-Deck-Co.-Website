@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[70vh] sm:min-h-[75vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[70vh] sm:min-h-[75vh] flex items-center justify-center overflow-hidden bg-charcoal">
       {/* Background image */}
       <img
         src="/images/completed%20hero%20photos/IMG_1103.jpeg"
@@ -12,27 +12,28 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-navy/60" />
+      {/* Charcoal overlay */}
+      <div className="absolute inset-0 bg-charcoal/70" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 sm:px-8 py-20 sm:py-28 max-w-3xl mx-auto">
-        {/* White logo badge */}
-        <Logo variant="white" badge className="h-28 sm:h-36 lg:h-40 w-auto mx-auto mb-8" />
+        {/* Stacked brand lockup - yard-sign style */}
+        <Logo
+          variant="dark"
+          stacked
+          className="text-base sm:text-xl lg:text-2xl"
+        />
 
-        <p className="text-cream/70 text-lg sm:text-xl max-w-lg mx-auto leading-relaxed">
+        <p className="text-paper/70 text-lg sm:text-xl max-w-lg mx-auto leading-relaxed mt-8">
           Custom outdoor spaces, designed and built&nbsp;by&nbsp;hand
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 bg-cream text-navy font-sans text-sm tracking-wide hover:bg-cream/90 transition-colors duration-200"
-          >
+          <Link href="/contact" className="btn-timber">
             Start a Conversation
           </Link>
           <Link
             href="/projects"
-            className="inline-flex items-center justify-center px-8 py-3 border border-cream/40 text-cream font-sans text-sm tracking-wide hover:bg-cream/10 transition-colors duration-200"
+            className="inline-flex items-center justify-center px-8 py-3 border border-paper/40 text-paper font-sans text-sm tracking-wide hover:bg-paper/10 transition-colors duration-200"
           >
             See Our Work
           </Link>

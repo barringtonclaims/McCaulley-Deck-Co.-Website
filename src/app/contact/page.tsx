@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm";
 import { companyInfo } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Contact | McCaulley Deck Co",
+  title: "Contact",
   description: "Get in touch for a free consultation on your outdoor project.",
 };
 
@@ -13,22 +13,22 @@ export default function ContactPage() {
       <div className="container-max">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h1 className="font-serif text-4xl sm:text-5xl text-navy">
+            <h1 className="font-bold tracking-tight text-4xl sm:text-5xl text-charcoal">
               Get in touch
             </h1>
-            <p className="text-navy/50 mt-4 leading-relaxed">
+            <p className="text-charcoal/65 mt-4 leading-relaxed">
               Tell us about your project and we&apos;ll get back to you within
               24 hours.
             </p>
 
-            <div className="mt-12 space-y-4 text-sm text-navy/50">
+            <div className="mt-12 space-y-4 text-sm text-charcoal/65">
               <p>
-                <a href={`tel:${companyInfo.phone}`} className="hover:text-navy transition-colors">
+                <a href={`tel:${companyInfo.phone}`} className="hover:text-charcoal transition-colors">
                   {companyInfo.phone}
                 </a>
               </p>
               <p>
-                <a href={`mailto:${companyInfo.email}`} className="hover:text-navy transition-colors">
+                <a href={`mailto:${companyInfo.email}`} className="hover:text-charcoal transition-colors">
                   {companyInfo.email}
                 </a>
               </p>

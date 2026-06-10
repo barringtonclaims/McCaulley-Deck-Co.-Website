@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" width="460" height="460">
+  <!-- McCaulley Deck Co. mark: five boards on a rounded square, rotated 45 degrees -->
+  <g transform="translate(230 230) rotate(-45)" fill="#D29A55">
+    <path d="M-144 -160 h288 a16 16 0 0 1 16 16 v36 h-320 v-36 a16 16 0 0 1 16 -16 z"/>
+    <rect x="-160" y="-88" width="320" height="52"/>
+    <rect x="-160" y="-16" width="320" height="52"/>
+    <rect x="-160" y="56" width="320" height="52"/>
+    <path d="M-160 128 h320 v16 a16 16 0 0 1 -16 16 h-288 a16 16 0 0 1 -16 -16 v-16 z"/>
+  </g>
+</svg>
