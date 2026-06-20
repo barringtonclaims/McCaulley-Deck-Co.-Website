@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { reportLeadConversion } from "@/lib/gtag";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -23,6 +24,7 @@ export default function ContactForm() {
       });
 
       if (res.ok) {
+        reportLeadConversion();
         setSubmitted(true);
       } else {
         setError(true);
