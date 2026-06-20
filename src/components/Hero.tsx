@@ -24,8 +24,11 @@ export default function Hero() {
           className="text-base sm:text-xl lg:text-2xl"
         />
 
-        <p className="text-paper/70 text-lg sm:text-xl max-w-lg mx-auto leading-relaxed mt-8">
-          Custom outdoor spaces, designed and built&nbsp;by&nbsp;hand
+        <h1 className="text-paper/70 text-lg sm:text-xl max-w-lg mx-auto leading-relaxed mt-8 font-normal">
+          Custom decks, designed and built&nbsp;by&nbsp;hand
+        </h1>
+        <p className="text-paper/50 text-xs sm:text-sm tracking-[0.15em] uppercase mt-4">
+          Barrington &amp; the NW Chicago Suburbs
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link href="/contact" className="btn-timber">

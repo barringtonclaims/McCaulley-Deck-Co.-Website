@@ -3,8 +3,10 @@ import ContactForm from "@/components/ContactForm";
 import { companyInfo } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Get in touch for a free consultation on your outdoor project.",
+  title: "Get a Free Deck Quote",
+  description:
+    "Get a free quote on a custom deck in Barrington or the NW Chicago suburbs. Tell us about your project - we reply within 24 hours.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

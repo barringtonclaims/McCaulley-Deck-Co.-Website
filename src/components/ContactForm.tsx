@@ -96,11 +96,12 @@ export default function ContactForm() {
             className="w-full px-4 py-3 bg-paper border border-paper-dark text-charcoal focus:border-bronze focus:outline-none transition-colors"
           >
             <option value="">Select...</option>
-            <option value="deck">Deck</option>
-            <option value="patio">Patio</option>
-            <option value="pergola">Pergola</option>
-            <option value="outdoor-living">Full Outdoor Living</option>
-            <option value="other">Other</option>
+            <option value="new-deck">New deck build</option>
+            <option value="deck-replacement">Deck replacement / rebuild</option>
+            <option value="composite-deck">Composite / Trex deck</option>
+            <option value="cedar-deck">Cedar / wood deck</option>
+            <option value="deck-addon">Railing, stairs or pergola</option>
+            <option value="other">Something else</option>
           </select>
         </div>
       </div>

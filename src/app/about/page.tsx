@@ -3,9 +3,10 @@ import CTABanner from "@/components/CTABanner";
 import ProgressMarquee from "@/components/ProgressMarquee";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Our Deck Company",
   description:
-    "Custom outdoor design and build - from concept to finished project.",
+    "McCaulley Deck Co. is a design-build deck company serving Barrington and the NW Chicago suburbs. Every deck starts as a 3D design and is built by hand.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
@@ -19,10 +20,11 @@ export default function AboutPage() {
             </div>
             <div className="space-y-6 text-charcoal/70 leading-relaxed">
               <p>
-                McCaulley Deck Co. is a design/build company focused on custom
-                outdoor spaces. We work primarily in decks, but we also take on
-                pergolas, patios, roof overhangs, and full outdoor living
-                builds - whatever the project&nbsp;needs.
+                McCaulley Deck Co. is a design/build company that specializes in
+                custom decks for homeowners across Barrington and the NW Chicago
+                suburbs. Cedar, composite, and pressure-treated decks - plus the
+                railings, stairs, lighting, and built-in features that finish
+                them&nbsp;off.
               </p>
               <p>
                 Every project starts with a design. We create 3D models so

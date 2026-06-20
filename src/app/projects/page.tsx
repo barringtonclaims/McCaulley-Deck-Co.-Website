@@ -4,9 +4,10 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Deck Projects & Portfolio",
   description:
-    "Browse our portfolio of custom outdoor builds - from design to finished project.",
+    "Browse custom deck builds by McCaulley Deck Co. - composite, cedar & multi-level decks across the NW Chicago suburbs, from 3D design to finished deck.",
+  alternates: { canonical: "/projects" },
 };
 
 export default function ProjectsPage() {
