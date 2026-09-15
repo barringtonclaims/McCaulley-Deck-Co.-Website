@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { reportLeadConversion } from "@/lib/gtag";
 import { leadAttribution } from "@/lib/leadAttribution";
+import { companyInfo } from "@/lib/data";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -175,8 +176,16 @@ export default function ContactForm() {
       </div>
 
       {error && (
-        <p className="text-red-500 text-sm">
-          Something went wrong. Please try again or email us directly.
+        <p role="alert" className="text-red-700 text-sm">
+          We couldn&apos;t confirm your submission. Your details are still here
+          so you can try again, or contact us directly: {" "}
+          <a href={`mailto:${companyInfo.email}`} className="underline">
+            {companyInfo.email}
+          </a>{" "}
+          or {" "}
+          <a href={`tel:${companyInfo.phone}`} className="underline">
+            {companyInfo.phone}
+          </a>.
         </p>
       )}
 
