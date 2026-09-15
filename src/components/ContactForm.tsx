@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { reportLeadConversion } from "@/lib/gtag";
+import { leadAttribution } from "@/lib/leadAttribution";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,6 +16,9 @@ export default function ContactForm() {
 
     const form = e.currentTarget;
     const data = new FormData(form);
+    for (const [key, value] of Object.entries(leadAttribution(window.location.search))) {
+      data.set(key, value);
+    }
 
     try {
       const res = await fetch("https://formspree.io/f/xlgplgpn", {
@@ -153,6 +157,20 @@ export default function ContactForm() {
           name="message"
           rows={5}
           className="w-full px-4 py-3 bg-paper border border-paper-dark text-charcoal placeholder:text-charcoal/30 focus:border-bronze focus:outline-none transition-colors resize-none"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="referral-source" className="block text-sm text-charcoal/70 mb-1.5">
+          How did you hear about us? (optional)
+        </label>
+        <input
+          type="text"
+          id="referral-source"
+          name="referral-source"
+          maxLength={120}
+          placeholder="Google, a friend, a local business…"
+          className="w-full px-4 py-3 bg-paper border border-paper-dark text-charcoal placeholder:text-charcoal/30 focus:border-bronze focus:outline-none transition-colors"
         />
       </div>
 
