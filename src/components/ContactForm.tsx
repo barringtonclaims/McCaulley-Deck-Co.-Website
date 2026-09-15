@@ -108,6 +108,42 @@ export default function ContactForm() {
         </div>
       </div>
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label htmlFor="project-location" className="block text-sm text-charcoal/70 mb-1.5">
+            Project town or ZIP code
+          </label>
+          <input
+            type="text"
+            id="project-location"
+            name="project-location"
+            required
+            maxLength={120}
+            aria-describedby="project-location-help"
+            className="w-full px-4 py-3 bg-paper border border-paper-dark text-charcoal placeholder:text-charcoal/30 focus:border-bronze focus:outline-none transition-colors"
+          />
+          <p id="project-location-help" className="mt-1.5 text-sm text-charcoal/65">
+            This helps us confirm we serve your area.
+          </p>
+        </div>
+        <div>
+          <label htmlFor="project-timing" className="block text-sm text-charcoal/70 mb-1.5">
+            Preferred timing (optional)
+          </label>
+          <select
+            id="project-timing"
+            name="project-timing"
+            className="w-full px-4 py-3 bg-paper border border-paper-dark text-charcoal focus:border-bronze focus:outline-none transition-colors"
+          >
+            <option value="">Select...</option>
+            <option value="soon">As soon as practical</option>
+            <option value="1-3-months">In the next 1–3 months</option>
+            <option value="later">Later this year or next year</option>
+            <option value="exploring">Just exploring options</option>
+          </select>
+        </div>
+      </div>
+
       <div>
         <label htmlFor="message" className="block text-sm text-charcoal/70 mb-1.5">
           Tell us about your project
