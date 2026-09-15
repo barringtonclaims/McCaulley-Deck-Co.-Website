@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo";
+import { SITE_URL, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo";
 import { GOOGLE_ADS_ID } from "@/lib/gtag";
 import "./globals.css";
 
@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mccaulleydeck.co"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "McCaulley Deck Co. | Deck Builder in Barrington & NW Suburbs",
     template: "%s | McCaulley Deck Co.",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "McCaulley Deck Co. | Custom Deck Builder, NW Chicago Suburbs",
     description:
       "Custom decks designed & built by hand in Barrington and the NW Chicago suburbs. Cedar, composite & pressure-treated. Free 3D design.",
-    url: "https://mccaulleydeck.co",
+    url: SITE_URL,
     siteName: "McCaulley Deck Co.",
     locale: "en_US",
     type: "website",

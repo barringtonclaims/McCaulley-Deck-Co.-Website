@@ -1,6 +1,6 @@
 import { companyInfo, testimonials } from "@/lib/data";
 
-export const SITE_URL = "https://mccaulleydeck.co";
+export const SITE_URL = "https://www.mccaulleydeck.co";
 
 // ~20 mile radius around Barrington, IL — the NW Chicago suburbs we serve.
 export const serviceAreas = [
