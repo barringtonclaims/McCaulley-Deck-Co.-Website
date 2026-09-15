@@ -1,4 +1,5 @@
 import { projects } from "@/lib/data";
+import Image from "next/image";
 import heroData from "@/lib/heroes.json";
 
 type HeroMap = Record<string, { renderingIndex: number; photoIndex: number }>;
@@ -61,11 +62,13 @@ export default function ImageMarquee() {
         {doubled.map((img, i) => (
           <div
             key={i}
-            className="shrink-0 w-44 h-28 sm:w-52 sm:h-32 rounded-sm overflow-hidden"
+            className="relative shrink-0 w-44 h-28 sm:w-52 sm:h-32 rounded-sm overflow-hidden"
           >
-            <img
+            <Image
               src={img.src}
               alt={img.alt}
+              fill
+              sizes="(max-width: 639px) 176px, 208px"
               className="w-full h-full object-cover"
               loading="lazy"
             />

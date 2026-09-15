@@ -1,13 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 import Logo from "./Logo";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[70vh] sm:min-h-[75vh] flex items-center justify-center overflow-hidden bg-charcoal">
       {/* Background image */}
-      <img
+      <Image
         src="/images/completed%20hero%20photos/IMG_1103.jpeg"
         alt=""
+        fill
+        priority
+        sizes="100vw"
         className="absolute inset-0 w-full h-full object-cover"
         aria-hidden="true"
       />
